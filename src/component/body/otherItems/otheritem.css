@@ -1,0 +1,50 @@
+.otherItem {
+  background-color: transparent;
+  padding: 20px;
+}
+
+.otherItem .items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.otherItem .items .item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.otherItem .items .item-container .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.295);
+}
+
+.otherItem .items .item-container .icon-container .othericons {
+  width: 20px;
+  height: 20px;
+  /* color: white; */
+}
+
+.otherItem .items .item-container .item-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: rgba(0, 0, 0, 0.424);
+}

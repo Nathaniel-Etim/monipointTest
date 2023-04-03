@@ -1,0 +1,13 @@
+.main {
+  z-index: 1;
+  position: absolute;
+  top: 3.7rem;
+  bottom: 4rem;
+  right: 2px;
+  left: 2px;
+  overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}

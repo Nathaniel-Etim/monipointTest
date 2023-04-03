@@ -1,0 +1,62 @@
+.about-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.about-details .details-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.about-details .details-brand .brand-item {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.424);
+}
+
+.about-details .details-brand .brand-name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.749);
+}
+
+.about-details .item-color {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.about-details .item-color .color-heading {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.424);
+}
+
+.about-details .item-color .item-color {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.749);
+}

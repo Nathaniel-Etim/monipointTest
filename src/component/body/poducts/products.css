@@ -1,0 +1,156 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 20px 30px 20px;
+  background-color: rgba(154, 152, 152, 0.14);
+}
+
+.products .products-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 5rem;
+  width: 90%;
+  padding: 0 20px;
+}
+
+.products .products-top .heading {
+  /*  */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 16px;
+
+  color: rgba(0, 0, 0, 0.818);
+}
+
+.products .products-top .top-right {
+  /*  */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+
+  color: rgba(0, 128, 0, 0.705);
+}
+
+.products .product-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.products .product-bottom .bottom-card {
+  /*  */
+  min-width: 110px;
+  max-width: 229px;
+  cursor: pointer;
+}
+
+.products .product-bottom .bottom-card .card-top {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+.products .product-bottom .bottom-card .card-top .likeicon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.products .product-bottom .bottom-card .card-bottom {
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+}
+
+.products .product-bottom .bottom-card .card-bottom .Category {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.424);
+}
+
+.products .product-bottom .bottom-card .card-bottom .Product-name {
+  height: 3rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 16px;
+  width: 91%;
+
+  color: rgba(0, 0, 0, 0.818);
+}
+
+.products .product-bottom .bottom-card .card-bottom .rating-price {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.products .product-bottom .bottom-card .card-bottom .rating-price .rating {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  align-items: center;
+}
+
+.products
+  .product-bottom
+  .bottom-card
+  .card-bottom
+  .rating-price
+  .rating
+  .rating-icon {
+  color: gold;
+}
+
+.products .product-bottom .bottom-card .card-bottom .rating-price .rating span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.424);
+}
+
+.products .product-bottom .bottom-card .card-bottom .rating-price .price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 16px;
+  cursor: pointer;
+  color: rgba(0, 128, 0, 0.704);
+}

@@ -1,0 +1,101 @@
+.detailfotter {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-bottom: 0.6px solid gray;
+
+  gap: 20px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 5px 5px gray;
+  z-index: 900;
+  height: 50px;
+}
+
+.detailfotter .fotter-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.detailfotter .fotter-left .text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.424);
+}
+
+.detailfotter .fotter-left .amount {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 16px;
+  color: rgba(0, 128, 0, 0.704);
+}
+
+.detailfotter .fotter-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.detailfotter .fotter-right .cart-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 5rem;
+  height: 2.5rem;
+  gap: 5px;
+  cursor: pointer;
+
+  background-color: rgba(0, 128, 0, 0.704);
+  color: white;
+}
+
+.detailfotter .fotter-right .cart-item .fotter-cart {
+  width: 25px;
+  height: 20px;
+}
+
+.detailfotter .fotter-right .cart-item .number {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.detailfotter .fotter-right .buy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.566);
+  color: white;
+  width: 6rem;
+  height: 2.5rem;
+}
+
+.detailfotter .fotter-right .buy span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+  color: white;
+}

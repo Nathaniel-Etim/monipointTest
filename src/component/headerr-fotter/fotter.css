@@ -1,0 +1,41 @@
+.fotter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 0.6px solid gray;
+  z-index: 900;
+  box-shadow: 2px 0px 5px 5px gray;
+  padding: 10px 20px;
+}
+
+.fotter .fotter-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.fotter .fotter-item .items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fotter .fotter-item .items img {
+  width: 20px;
+  height: 20px;
+}
+
+.fotter .fotter-item .items span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+
+  color: rgba(0, 0, 0, 0.424);
+}

@@ -1,0 +1,78 @@
+.header-top {
+  height: 11.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.header-top .header-item {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 10px;
+}
+
+.header-top .header-item .item-rol1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 16px;
+
+  color: rgba(0, 0, 0, 0.424);
+}
+
+.header-top .header-item .item-row2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.header-top .header-item .item-row2 .row2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+.header-top .header-item .item-row2 .row2-container .off {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 16px;
+
+  color: rgba(0, 0, 0, 0.761);
+}
+
+.header-top .header-item .item-row2 .row2-container .content {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+  max-width: 10px;
+  color: rgba(0, 0, 0, 0.424);
+}
+
+.header-top .header-item .item-row2 .check-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  background-color: rgba(0, 0, 0, 0.671);
+  height: 50px;
+  border-radius: 5px;
+  color: #ffff;
+  cursor: pointer;
+}
