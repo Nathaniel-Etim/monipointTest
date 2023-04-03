@@ -1,6 +1,5 @@
 import React from "react";
 import "./fotter.css";
-import Home from "../../props/homeicon.png";
 import { FiSettings, FiCreditCard } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
 import { MdLocalOffer } from "react-icons/md";

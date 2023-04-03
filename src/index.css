@@ -33,3 +33,19 @@ html::-webkit-scrollbar {
 .notactive {
   color: gray;
 }
+
+.topImage {
+  position: absolute;
+  right: 0;
+  animation: move-left 4.5s forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes move-left {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}

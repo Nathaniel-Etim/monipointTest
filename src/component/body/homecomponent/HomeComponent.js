@@ -14,7 +14,7 @@ function HomeComponent() {
   useEffect(() => {
     const interValid = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % theImage.length);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interValid);
   }, [currentIndex, theImage.length]);
@@ -26,6 +26,7 @@ function HomeComponent() {
           src={theImage[currentIndex]}
           alt="jhgfd"
           style={{ width: "99%", height: "11.6rem" }}
+          className="topImage"
         />
       </div>
       <div>

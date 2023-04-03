@@ -3,6 +3,7 @@ import "./aboutproduct.css";
 import { BsStarFill, BsShop } from "react-icons/bs";
 import AboutDetails from "../aboutReview/about";
 import { useSelector } from "react-redux";
+import Description from "./descriptoin.js";
 import { useParams } from "react-router-dom";
 
 function AboutProductDetailPage() {
@@ -90,8 +91,9 @@ function AboutProductDetailPage() {
               <span className="about detailActive"> About Item </span>
               <span className="about review"> Review</span>
             </div>
-            <main>
+            <main style={{ width: "95%" }}>
               <AboutDetails />
+              <Description />
             </main>
           </div>
         );
