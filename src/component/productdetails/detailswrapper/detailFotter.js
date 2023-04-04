@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
 function DetailFotter() {
-  const Product = useSelector((store) => store.items);
+  const Product = useSelector((store) => store.items.AllProducts);
 
   const { id } = useParams();
 

@@ -8,12 +8,15 @@ import { useParams } from "react-router-dom";
 
 function AboutProductDetailPage() {
   const [displayImage, setDisplayImage] = useState();
-  const Product = useSelector((store) => store.items);
+  const Product = useSelector((store) => store.items.AllProducts);
+  const ProductLiked = useSelector((store) => store.items.defaltCart.items);
   const { id } = useParams();
 
   const productDetails = Product.filter((element) => {
     return element.id === id;
   });
+
+  console.log(ProductLiked);
 
   const itemImage = productDetails[0];
 

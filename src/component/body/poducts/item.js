@@ -2,6 +2,8 @@ import React from "react";
 import Card from "../../UI/card";
 import { BsStarFill, BsHeartFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { allProductAction } from "../../../store/store";
 
 function AllProduct({
   id,
@@ -11,11 +13,28 @@ function AllProduct({
   mainImg,
   name,
   orderQuantity,
+  liked,
 }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   function onNavigateToPageDetailHandeler() {
     navigate(`/${id}`);
+  }
+
+  function onLikePostHandelerFunction() {
+    dispatch(
+      allProductAction.itemIsLiked({
+        id,
+        cartigory,
+        details,
+        productIcon,
+        mainImg,
+        name,
+        orderQuantity,
+        liked,
+      })
+    );
   }
 
   return (
@@ -25,7 +44,11 @@ function AllProduct({
           className="card-top"
           style={{ backgroundImage: `url(${mainImg})` }}
         >
-          <BsHeartFill className="likeicon" />
+          <BsHeartFill
+            className="likeicon"
+            onClick={onLikePostHandelerFunction}
+            style={{ color: `${liked ? "red" : "white"}` }}
+          />
         </div>
         <div className="card-bottom">
           <span className="Category">{cartigory}</span>

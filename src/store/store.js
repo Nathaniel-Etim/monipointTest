@@ -37,6 +37,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "female",
+    liked: false,
   },
   {
     id: "product-2",
@@ -52,6 +53,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "male",
+    liked: false,
   },
   {
     id: "product-3",
@@ -67,6 +69,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "male",
+    liked: false,
   },
   {
     id: "product-4",
@@ -85,6 +88,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "female",
+    liked: false,
   },
   {
     id: "product-5",
@@ -102,6 +106,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "female",
+    liked: false,
   },
   {
     id: "product-6",
@@ -119,6 +124,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "",
+    liked: false,
   },
   {
     id: "product-7",
@@ -136,6 +142,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "",
+    liked: false,
   },
   {
     id: "product-8",
@@ -154,6 +161,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "male",
+    liked: false,
   },
 
   {
@@ -172,6 +180,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "male",
+    liked: false,
   },
   {
     id: "product-0",
@@ -189,6 +198,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "male",
+    liked: false,
   },
   {
     id: "product-10",
@@ -207,6 +217,7 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "female",
+    liked: false,
   },
   {
     id: "product-11",
@@ -225,17 +236,52 @@ const AllProducts = [
     },
     orderQuantity: 2,
     cartigory: "male",
+    liked: false,
   },
 ];
+const defaltCart = {
+  items: [],
+  totalQuality: 0,
+};
 
 const allProduct = createSlice({
   name: "products",
-  initialState: AllProducts,
-  reducers: {},
+  initialState: { AllProducts, defaltCart },
+  reducers: {
+    itemIsLiked(state, action) {
+      const newItem = action.payload;
+
+      const exitingItem = state.defaltCart.items.find(
+        (item) => item.id === newItem.id
+      );
+
+      state.totalQuality++;
+
+      if (!exitingItem && !newItem.liked) {
+        state.defaltCart.items.push({
+          id: newItem.id,
+          cartigory: newItem.cartigory,
+          details: newItem.details,
+          productIcon: newItem.productIcon,
+          mainImg: newItem.mainImg,
+          name: newItem.name,
+          orderQuantity: 1,
+          liked: true,
+        });
+      } else {
+        //? the item in cart quantity will increase by 1
+        // exitingItem.orderQuantity++
+        return;
+      }
+      console.log(newItem);
+    },
+  },
 });
 
 const store = configureStore({
   reducer: { items: allProduct.reducer },
 });
+
+export const allProductAction = allProduct.actions;
 
 export default store;

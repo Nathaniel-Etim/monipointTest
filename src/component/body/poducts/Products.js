@@ -4,7 +4,9 @@ import AllProduct from "./item";
 import { useSelector } from "react-redux";
 
 function Products() {
-  const Product = useSelector((store) => store.items);
+  const Product = useSelector((store) => store.items.AllProducts);
+  const ProductLiked = useSelector((store) => store.items.defaltCart.items);
+
   const targetRef = useRef(null);
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -32,6 +34,9 @@ function Products() {
   }, []);
 
   const AllItems = Product.map((element, index) => {
+    const likedItem = ProductLiked.filter((el) => {
+      return el.id === element.id;
+    });
     return (
       <AllProduct
         key={index}
@@ -42,6 +47,7 @@ function Products() {
         mainImg={element.mainImg}
         name={element.name}
         orderQuantity={element.orderQuantity}
+        liked={likedItem[0]?.liked ? likedItem[0]?.liked : element.liked}
       />
     );
   });
